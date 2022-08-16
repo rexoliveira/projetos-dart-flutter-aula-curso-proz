@@ -7,7 +7,7 @@
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/top-langs/?username=rexoliveira&repo=v3_projeto_um_aula_xampp&langs_count=10&hide=HTML5,CSS3&show_icons=true&theme=gotham&layout=compact&custom_title=ProjetoDeAula_v3_smartcamaqua&range=last_7_days)](https://github.com/rexoliveira/projetos-dart-flutter-aula-curso-proz/github-readme-stats)
 ##Discord
-<img src="https://discordapp.com/api/guilds/Rodrigo_OLiveira#3291/widget.png?style=shield" alt="Discord Shield"/>
+![Discord Banner 1](https://discordapp.com/api/guilds/3291/widget.png?style=banner1)
 ## E-mail acadêmico:
 
 📧 rodrigooliveira.cm015@academico.ifsul.com.br
