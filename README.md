@@ -7,8 +7,7 @@
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/top-langs/?username=rexoliveira&repo=projetos-dart-flutter-aula-curso-proz&langs_count=10&hide=HTML5,CSS3&show_icons=true&theme=gotham&layout=compact&custom_title=Projetos-Dart-Flutter-Curso-Proz&range=last_7_days)](https://github.com/rexoliveira/projetos-dart-flutter-aula-curso-proz/github-readme-stats)<br>
 ##Discord<br>
-
-![Discord Banner 2](https://discordapp.com/api/guilds/[1002314313224171611]/widget.png?style=banner2)
+[<img src = "https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">](rodrigooliveira.cm015@academico.ifsul.com.br)
 
 ### [📱 E-mail acadêmico:](#-contact-)
 [![](https://img.shields.io/badge/Gmail-rodrigooliveira.cm015@academico.ifsul.com.br-lightgrey?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rodrigooliveira.cm015@academico.ifsul.com.br)
