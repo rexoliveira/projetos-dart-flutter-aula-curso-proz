@@ -1,5 +1,5 @@
 # projetos-dart-flutter-aula-curso-proz
-###Curso de Flutter na instituição Proz 
+#Curso de Flutter na instituição Proz 
 <br>
 ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
@@ -10,7 +10,7 @@
 ###Discord<br>
 [<img src = "https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">](https://discordapp.com/channels/1002314313224171611/1002322799114862643/1008918614449066064)
 
-### [📱 E-mail acadêmico:](#-contact-)
+# [📱 E-mail acadêmico:](#-contact-)
 [![](https://img.shields.io/badge/Gmail-rodrigooliveira.cm015@academico.ifsul.com.br-lightgrey?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rodrigooliveira.cm015@academico.ifsul.com.br)
 
 
