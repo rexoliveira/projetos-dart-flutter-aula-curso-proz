@@ -8,8 +8,7 @@ Curso de Flutter na instituição Proz
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/top-langs/?username=rexoliveira&repo=projetos-dart-flutter-aula-curso-proz&langs_count=10&hide=HTML5,CSS3&show_icons=true&theme=gotham&layout=compact&custom_title=Projetos-Dart-Flutter-Curso-Proz&range=last_7_days)](https://github.com/rexoliveira/projetos-dart-flutter-aula-curso-proz/github-readme-stats)<br>
 <br>
-[![icons8-logo-discord-48 (1)](https://user-images.githubusercontent.com/67833327/184795840-05226ce4-7065-46b3-add2-459191521c4f.png)
- Discord](#-discord-)<br>
+[Discord](#-discord-)<br>
 [<img src = "https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">](https://discordapp.com/channels/1002314313224171611/1002322799114862643/1008918614449066064)
 <br>
 [📱 E-mail acadêmico:](#-contact-)<br>
