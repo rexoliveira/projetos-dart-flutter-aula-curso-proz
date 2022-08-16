@@ -9,6 +9,7 @@
 ##Discord<br>
 
 ![My Discord](https://discord-readme-badge.vercel.app/api?id=<1002322799114862643-1008918614449066064>)
+
 ## E-mail acadêmico:
 
 📧 rodrigooliveira.cm015@academico.ifsul.com.br
