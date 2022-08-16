@@ -11,6 +11,6 @@
 ![Discord Banner 2](https://discordapp.com/api/guilds/[1002314313224171611]/widget.png?style=banner2)
 
 ### [📱 E-mail acadêmico:](#-contact-)
-[![](https://img.shields.io/badge/Gmail-igor.matos.oliveira.xyz%40gmail.com-lightgrey?style=for-the-badge&logo=gmail&logoColor=white)](mailto:📧 rodrigooliveira.cm015@academico.ifsul.com.br)
+[![](https://img.shields.io/badge/Gmail-rodrigooliveira.cm015@academico.ifsul.com.br-lightgrey?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rodrigooliveira.cm015@academico.ifsul.com.br)
 
 
