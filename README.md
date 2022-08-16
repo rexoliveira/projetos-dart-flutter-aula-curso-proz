@@ -11,10 +11,10 @@ Curso de Flutter na instituição Proz
 <hr>
 <br>
 Discord<br>
-[<img src = "https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">](https://discordapp.com/channels/1002314313224171611/1002322799114862643/1008918614449066064)
+#[<img src = "https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">](https://discordapp.com/channels/1002314313224171611/1002322799114862643/1008918614449066064)
 <hr>
 <br>
-[📱 E-mail acadêmico:](#-contact-)
+#[📱 E-mail acadêmico:](#-contact-)
 [![](https://img.shields.io/badge/Gmail-rodrigooliveira.cm015@academico.ifsul.com.br-lightgrey?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rodrigooliveira.cm015@academico.ifsul.com.br)
 
 
