@@ -3,7 +3,7 @@ import 'dart:io';
 
 //Variaveis Lista, valor, entraValor tipo "String" e "num" GLOBAL
 final meuExercicios = <String>[];
-String valor = entrarValor();
+String valor = inserirValor();
 num? entraValor = verificarNumero(valor);
 
 //Metodo MAIN inicia a aplicação
@@ -11,14 +11,15 @@ void main(List<String> arguments) {
   String option = "";
 
   do {
+    entraValor = null;
     //Chama o menu de opções
     chamarListaMenu();
-    if (meuExercicios.isEmpty && valor != "1" && valor != "0") {
-      imprimirMsg(msgs: "Lista vazia!");
-      entraValor = 1;
-    }
 
-    entrarMenu();
+    //Caso não digitar números
+    entrarDadoMenu();
+
+    //Verifica se a lista está vazia
+    verificarLista();
 
     switch (entraValor) {
       //Sai da aplicação
@@ -27,21 +28,21 @@ void main(List<String> arguments) {
         break;
       //Adiciona tema a lista
       case 1:
-        imprimirMsg(msgs: 'Digite o tema a ser adicionado ou "Sair": ');
-        String thema = entrarValor();
+        imprimirMsg(msgs: 'Digite o tema a ser adicionado a lista ou "Menu": ');
+        String thema = inserirValor();
         if (!sairApp(situacao: thema)) {
           break;
         }
         adicionarTema(thema: thema);
         imprimirMsg(msgs: 'Tarefa $thema adicinada a lista!');
         //Limpa a varivel de entrada
-        entraValor = null;
+        /* entraValor = null; */
         break;
       //Remove o tema da lista mas antes remove o tema
       case 2:
         listarItensLista();
-        imprimirMsg(msgs: 'Digite a posição a ser removida ou "Sair": ');
-        String posicaoRemover = entrarValor();
+        imprimirMsg(msgs: 'Digite a posição a ser removida ou "Menu": ');
+        String posicaoRemover = inserirValor();
         if (!sairApp(situacao: posicaoRemover)) {
           break;
         }
@@ -51,17 +52,17 @@ void main(List<String> arguments) {
                 'O tema "$temp" foi removido na lista na posição $posicaoRemover !');
         listarItensLista();
         //Limpa a varivel de entrada
-        entraValor = null;
+        /* entraValor = null; */
         break;
       case 3:
         listarItensLista();
-        imprimirMsg(msgs: 'Digite a posição a ser atualizada ou "Sair: ');
-        String posicaoAtualizar = entrarValor();
+        imprimirMsg(msgs: 'Digite a posição a ser atualizada ou "Menu: ');
+        String posicaoAtualizar = inserirValor();
         if (!sairApp(situacao: posicaoAtualizar)) {
           break;
         }
-        imprimirMsg(msgs: 'Digite o tema a ser atualizado ou "Sair": ');
-        String valor = entrarValor();
+        imprimirMsg(msgs: 'Digite o tema a ser atualizado ou "Menu": ');
+        String valor = inserirValor();
         if (!sairApp(situacao: valor)) {
           break;
         }
@@ -72,7 +73,7 @@ void main(List<String> arguments) {
                 'O tema "$temp" foi atualizado na lista na posição $posicaoAtualizar !');
         listarItensLista();
         //Limpa a varivel de entrada
-        entraValor = null;
+        /* entraValor = null; */
         break;
       case 4:
         imprimirMsg(msgs: 'Lista antes de ser reordenada: ');
@@ -89,12 +90,12 @@ void main(List<String> arguments) {
         imprimirMsg(msgs: 'Lista após de ser reordenada: ');
         listarItensLista();
         //Limpa a varivel de entrada
-        entraValor = null;
+        /* entraValor = null; */
         break;
       case 5:
         listarItensLista();
         //Limpa a varivel de entrada
-        entraValor = null;
+        /* entraValor = null; */
         break;
       default:
         imprimirMsg(msgs: 'Erro; entrada de dados inválida! ');
@@ -108,33 +109,51 @@ void main(List<String> arguments) {
 
 //FUNÇÃO - Menu de opções
 void chamarListaMenu() {
-  imprimirMsg(msgs: "Escolha uma das opções abaixo");
-  imprimirMsg(msgs: '''
-          1) Adicionar tema
-          2) Remover tema
-          3) Atualizar tema
-          4) Reordenar lista
-          5) Mostrar lista
-          0) Sair
-          ''');
+  final menu = <String>[
+    "Sair da aplicação",
+    "Adicionar tema",
+    "Remover tema",
+    "Atualizar tema",
+    "Reordenar lista",
+    "Mostrar lista",
+  ];
+  var i = 0;
+  for (i = 1; i < menu.length; i++) {
+    imprimirMsg(msgs: "$i) ${menu[i]}");
+  }
+  //Imprime por ultimo item "Sair do APP"
+  imprimirMsg(msgs: "0) ${menu[0]}");
+  imprimirMsg(msgs: "Escolha uma das opções acima*:");
+  entraValor = verificarNumero(inserirValor());
+}
+
+//FUNÇÃO - Verifica se a lis está vazia
+void verificarLista() {
+  if (meuExercicios.isEmpty && valor != "1" && valor != "0") {
+    imprimirMsg(msgs: "Lista vazia!");
+    entraValor = 1;
+  }
 }
 
 //FUNÇÃO - Verifica se é um número e se esta entre 0 e 5
-void entrarMenu() {
+void entrarDadoMenu() {
   while (
       entraValor == null || !(int.parse(valor) >= 0 && int.parse(valor) <= 5)) {
-    imprimirMsg(msgs: "Escolha somente números inteiros entre 0 e 5!");
-    valor = entrarValor();
+    imprimirMsg(msgs: "(*Escolha somente números inteiros entre 0 e 5!)");
+    valor = inserirValor();
     entraValor = verificarNumero(valor);
   }
 }
 
+//FUNÇÃO - Voltar ao menu ou sair da aplicação
 bool sairApp({required String situacao}) {
-  if (situacao == "Sair") {
+  if (situacao.toLowerCase() == "menu") {
     imprimirMsg(msgs: "Retornou ao Menu!");
+    /* entraValor = null; */
     return false;
   } else if (situacao == "0") {
     imprimirMsg(msgs: "Saiu da aplicação!");
+    /* entraValor = null; */
     exit(0);
   }
   return true;
@@ -142,7 +161,7 @@ bool sairApp({required String situacao}) {
 
 //FUNÇÃO - Entrada de valores tipo "String"
 //Retorna valor inserido na entraga do teclado
-String entrarValor() {
+String inserirValor() {
   String valor = stdin.readLineSync(encoding: utf8)!;
   return valor.trim();
 }
