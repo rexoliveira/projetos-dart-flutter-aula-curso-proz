@@ -13,7 +13,7 @@ void main(List<String> arguments) {
   do {
     //Chama o menu de opções
     chamarListaMenu();
-    if (meuExercicios.isEmpty && valor != "1") {
+    if (meuExercicios.isEmpty && valor != "1" && valor != "0") {
       imprimirMsg(msgs: "Lista vazia!");
       entraValor = 1;
     }
@@ -23,13 +23,16 @@ void main(List<String> arguments) {
     switch (entraValor) {
       //Sai da aplicação
       case 0:
-        sairApp();
+        sairApp(situacao: entraValor.toString());
         break;
       //Adiciona tema a lista
       case 1:
-        imprimirMsg(msgs: 'Digite o tema a ser adicionado ou 0 para sair: ');
+        imprimirMsg(msgs: 'Digite o tema a ser adicionado ou "Sair": ');
         String thema = entrarValor();
-        (thema == "0") ? sairApp() : adicionarTema(thema: thema);
+        if (!sairApp(situacao: thema)) {
+          break;
+        }
+        adicionarTema(thema: thema);
         imprimirMsg(msgs: 'Tarefa $thema adicinada a lista!');
         //Limpa a varivel de entrada
         entraValor = null;
@@ -39,7 +42,9 @@ void main(List<String> arguments) {
         listarItensLista();
         imprimirMsg(msgs: 'Digite a posição a ser removida ou "Sair": ');
         String posicaoRemover = entrarValor();
-        (posicaoRemover == "Sair") ? sairApp() : "";
+        if (!sairApp(situacao: posicaoRemover)) {
+          break;
+        }
         String temp = removerItem(posicaoRemover: posicaoRemover);
         imprimirMsg(
             msgs:
@@ -52,10 +57,14 @@ void main(List<String> arguments) {
         listarItensLista();
         imprimirMsg(msgs: 'Digite a posição a ser atualizada ou "Sair: ');
         String posicaoAtualizar = entrarValor();
-        (posicaoAtualizar == "Sair") ? sairApp() : "";
+        if (!sairApp(situacao: posicaoAtualizar)) {
+          break;
+        }
         imprimirMsg(msgs: 'Digite o tema a ser atualizado ou "Sair": ');
         String valor = entrarValor();
-        (valor == "Sair") ? sairApp() : "";
+        if (!sairApp(situacao: valor)) {
+          break;
+        }
         String temp =
             atualizarItem(posicaoAtualizar: posicaoAtualizar, valor: valor);
         imprimirMsg(
@@ -89,7 +98,7 @@ void main(List<String> arguments) {
         break;
       default:
         imprimirMsg(msgs: 'Erro; entrada de dados inválida! ');
-        sairApp();
+        sairApp(situacao: "0");
     }
   } while (option != "0");
 }
@@ -120,9 +129,15 @@ void entrarMenu() {
   }
 }
 
-void sairApp() {
-  imprimirMsg(msgs: "Saiu da aplicação!");
-  exit(0);
+bool sairApp({required String situacao}) {
+  if (situacao == "Sair") {
+    imprimirMsg(msgs: "Retornou ao Menu!");
+    return false;
+  } else if (situacao == "0") {
+    imprimirMsg(msgs: "Saiu da aplicação!");
+    exit(0);
+  }
+  return true;
 }
 
 //FUNÇÃO - Entrada de valores tipo "String"
@@ -163,6 +178,7 @@ void listarItensLista() {
 String removerItem({required String posicaoRemover}) {
   String temp = meuExercicios[int.parse(posicaoRemover) - 1];
   meuExercicios.removeAt(int.parse(posicaoRemover) - 1);
+
   return temp;
 }
 
@@ -174,5 +190,6 @@ String atualizarItem(
   removerItem(posicaoRemover: posicaoAtualizar);
   meuExercicios.insert(int.parse(posicaoAtualizar) - 1, valor);
   String temp = meuExercicios[int.parse(posicaoAtualizar) - 1];
+
   return temp;
 }
