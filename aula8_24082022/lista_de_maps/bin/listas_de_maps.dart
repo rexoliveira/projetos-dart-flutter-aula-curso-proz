@@ -114,6 +114,7 @@ void chamarListaMenu() {
   imprimirMsg(msgs: "0) ${menu[0]}");
   entraValor = verificarNumero(
       inserirValorTeclado(msg: "Escolha uma das opções acima*:"));
+  imprimirMsg(msgs: "======================${menu[int.parse(entraValor.toString())]}======================");
 }
 
 //FUNÇÃO - Verifica se a lis está vazia
@@ -194,17 +195,31 @@ imprimirMsg({required String msgs}) {
 //Album
 //Nacionalidade
 //Ano de lancamento
-List<String> propriedadesMusica() {
-  List<String> propriedades = <String>[
-    'nome',
-    'duaracao',
-    'autor',
-    'cantor',
-    'album',
-    'nacionalidade',
-    'anoLancamento'
-  ];
-  return propriedades;
+List<String> propriedadesMusica({bool imprime = false}) {
+  if (imprime) {
+    List<String> propriedadesImprime = <String>[
+      'Nome',
+      'Duração',
+      'Autor',
+      'Cantor',
+      'Álbum',
+      'Nacionalidade',
+      'Ano de Lançamento'
+    ];
+    return propriedadesImprime;
+  } else {
+    List<String> propriedadesMap = <String>[
+      'nome',
+      'duaracao',
+      'autor',
+      'cantor',
+      'album',
+      'nacionalidade',
+      'anoLancamento'
+    ];
+    return propriedadesMap;
+  }
+  return [];
 }
 
 String adicionarMusica() {
@@ -222,9 +237,10 @@ String adicionarMusica() {
   }
   Map<String, dynamic> musica = temp;
   minhasMusicas.add(musica);
-  imprimirMsg(msgs: "Música ${musica.values.elementAt(0)} adicinada a lista!");
-  imprimirMsg(msgs: "======================================================");
+  imprimirMsg(
+      msgs: 'Música "${musica.values.elementAt(0)}" adicinada a lista!');
   listarItensLista();
+
   return "";
 }
 
@@ -236,9 +252,16 @@ void listarItensLista({bool dalay = true}) {
     imprimirMsg(msgs: "LISTA VAZIA!");
   } else {
     for (var i = 0; i < minhasMusicas.length; i++) {
-      imprimirMsg(msgs: 'Posição ${i + 1} : ${minhasMusicas[i]}\n ');
+      List<String> propriedades = propriedadesMusica(imprime: true);
+      imprimirMsg(msgs: 'POSIÇÃO [${i + 1}]');
+      for (var j = 0; j < propriedades.length; j++) {
+        imprimirMsg(
+            msgs:
+                "${propriedades[j]}=> ${minhasMusicas[i].values.elementAt(j)}");
+      }
     }
   }
+  imprimirMsg(msgs: "======================================================");
   dalayAcao(ativo: dalay);
 }
 
@@ -338,7 +361,7 @@ bool listaReordenada() {
 } */
 
 void dalayAcao({bool ativo = false, duracaoSeg = 5, String msg = ""}) {
-  String mensagens = (msg == "") ? "Aguarde, o menu logo aparecerá" : msg;
+  String mensagens = (msg == "") ? "\nAguarde, o menu logo aparecerá" : msg;
   if (ativo) {
     stdout.write(mensagens);
     for (var i = 0; i < duracaoSeg; i++) {
