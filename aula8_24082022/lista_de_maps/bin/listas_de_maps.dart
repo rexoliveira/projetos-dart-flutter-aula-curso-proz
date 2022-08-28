@@ -219,7 +219,7 @@ List<String> propriedadesMusica({bool imprime = false}) {
     ];
     return propriedadesMap;
   }
-  return [];
+  
 }
 
 String adicionarMusica() {
