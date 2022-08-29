@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-//Para fins didáticos quase as todas as linhas foram comentadas*
+//Para fins didáticos quase  todas as linhas foram comentadas*
 //Nome de funções em portugues*
 //Código inativo para busca de solução*
 //*NÃO É BOA PRÁTICA
