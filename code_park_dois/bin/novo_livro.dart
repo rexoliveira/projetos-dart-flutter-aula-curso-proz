@@ -30,4 +30,21 @@ void main(List<String> arguments) {
   livro2.setMultaAtraso(0.99);
   print(livro2);
   print("============================================");
+
+  //Instância do Livro dois
+  var livro3 = Livro(
+      nome: "O Senhor dos Anéis: O retorno do Rei",
+      quantidadePaginas: 121,
+      autor: "J. R. R. Tolkien",
+      ano: 1955,
+      penalidadeAtraso: false);
+      
+  //Metodo define o valor da multa;
+  //Por ser um metodo privado só pode ser acessado caso exista Get e Set;
+  //Só será impresso esse valor caso "penalidadeAtraso" for definida como "TRUE",
+  //mesmo qua haja um valor definido aqui
+  livro3.setMultaAtraso(2.95);
+  print(livro3);
+  print("============================================");
 }
+
