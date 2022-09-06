@@ -1,4 +1,5 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:io';
+
 class Balconista {
   String nome;
   String? _senha;
@@ -9,34 +10,49 @@ class Balconista {
     required this.nome,
   });
 
+  set setNome(String nome) => this.nome = nome;
+  String get getNome => nome;
+
   void setSenha(String senha) {
-    if (senha.length >= 6) {
-      _senha = senha;
-      mensagem += "Senha definida!\n";
-    } else {
-      mensagem += "Mínimo de seis caracteres!\n";
+    bool teste = true;
+    while (teste) {
+      if (senha.length >= 6) {
+        _senha = senha;
+        mensagem += "Senha definida!\n";
+        teste = false;
+      } else {
+        print("Erro: Mínimo de seis caracteres!");
+        print("Digite uma senha maior ou igual a 6 caracteres:");
+        senha = stdin.readLineSync().toString();
+      }
     }
   }
+
+  get senha => _senha;
 
   void setNivel(int nivel) {
-    if (nivel > 0 && nivel <= 5) {
-      _nivelAcesso = nivel;
-      mensagem += "Acesso defindo! Nível:$nivel!\n";
-    } else {
-      mensagem += "Acesso a segura tem qye ser definido entre 1 e 5!\n";
+    bool teste = true;
+    while (teste) {
+      if (nivel > 0 && nivel <= 5) {
+        _nivelAcesso = nivel;
+        mensagem += "Acesso defindo! Nível:$nivel.\n";
+        teste = false;
+      } else {
+        print("Erro: Nível de acesso incorreto!");
+        print("Digite o nível de acesso entre 1 e 5:");
+        nivel = int.parse(stdin.readLineSync().toString());
+      }
     }
   }
 
-  String? getSenha() {
-    return _senha;
-  }
+  get nivelAcesso => _nivelAcesso;
 
-  int? getnivel() {
-    return _nivelAcesso;
-  }
+  set setMensagem(mensagem) => this.mensagem = mensagem;
+  get getMensagem => mensagem;
 
   @override
   String toString() {
+    //print("\x1B[2J\x1B[0;0H");
     return 'Balconista:\n nome: $nome,\n mensagem:\n $mensagem';
   }
 }
