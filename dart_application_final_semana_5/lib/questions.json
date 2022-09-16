@@ -1,0 +1,63 @@
+[
+  {
+    "0": {
+      "0": "1-Cadastre uma nova Empresa:",
+      "1": "Digite a Razão Social [ENTER]:",
+      "2": "Digite o Nome Fantasia [ENTER]:",
+      "3": "Digite o CNPJ [ENTER]:",
+      "4": "Digite a Endereço (Logradouro) [ENTER]:",
+      "5": "Digite a Endereço (Número) [ENTER]:",
+      "6": "Digite a Endereço (Bairro) [ENTER]:",
+      "7": "Digite a Endereço (Estado ) [ENTER]:",
+      "8": "Digite a Endereço (CEP) [ENTER]:",
+      "9": "Digite a Endereço (Complemento) [ENTER]:",
+      "10": "Digite o Telefone  [ENTER]:",
+      "11": "Digite os dados do Socio:\n Pessoa Física [1], Pessoa Jurídica [2] [ENTER]:"
+    },
+    "1": {
+      "0": "2-Busque empresa pelo CNPJ:",
+      "1": "Digite o CNPJ [ENTER]:"
+    },
+    "2": {
+      "0": "3-Busque empresa por CPF/CNPJ do Sócio:",
+      "1": "Digite o CPF ou CNPJ [ENTER]:"
+    },
+    "3": {
+      "0": "4-Listar empresas:"
+    },
+    "4": {
+      "0": "5-Exclua a empresa (ID):",
+      "1": "Digite o ID da empresa [ENTER]:"
+    },
+    "5": {
+      "0": "6-Sair"
+    }
+  },
+  {
+    "f0": "Pessoa Física:\nDigite o Nome Completo Socio [ENTER]",
+    "f1": "Digite o CPF Socio [ENTER]"
+  },
+  {
+    "j0": "Pessoa Jurídica:\nDigite o Nome Completo Socio [ENTER]",
+    "j1": "Digite a Razão Social Socio [ENTER]",
+    "j2": "Digite o Nome Fantasia Socio [ENTER]",
+    "j3": "Digite o CNPJ Socio [ENTER]"
+  },
+  {
+    "e0": "Digite o Endereço (Logradouro) [ENTER]",
+    "e1": "Digite o Endereço (Número) [ENTER]",
+    "e2": "Digite o Endereço (Bairro) [ENTER]",
+    "e3": "Digite o Endereço (Estado) [ENTER]",
+    "e4": "Digite o Endereço (CEP) [ENTER]",
+    "e5": "Digite o Endereço (Complemento) [ENTER]"
+  },
+  {
+    "out0": "\nSaiu da aplicação\n"
+  },
+  {
+    "erro0": "\nDigite um valor valido entre 1 e 6!\n"
+  },
+  {
+    "alert0": "\nDeseja adicionar mais Socio?\n Digite S ou N:\n"
+  }
+]
