@@ -3,19 +3,17 @@ class Endereco {
   int? numero;
   String? bairro;
   String? estadoSigla;
-  int? cep;
-  String complemento;
-  Endereco([
-    this.complemento = "",
-  ]);
+  String? cep;
+  String? complemento;
+  
 
   getLogradouro() => logradouro;
 
   setLogradouro(logradouro) => this.logradouro = logradouro;
 
-  getNumero() => numero;
+  int? getNumero() => numero;
 
-  setNumero(numero) => this.numero = numero;
+  setNumero(int numero) => this.numero = numero;
 
   getBairro() => bairro;
 
@@ -28,6 +26,10 @@ class Endereco {
   getCep() => cep;
 
   setCep(cep) => this.cep = cep;
+
+  getComplemento() => complemento;
+
+  setComplemento(complemento) => this.complemento = complemento;
 
   
   @override

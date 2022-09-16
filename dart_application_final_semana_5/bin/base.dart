@@ -30,7 +30,7 @@ void main(List<String> arguments) {
   Empresa empresa2 = Empresa();
   SocioJuridica socioJuridica = SocioJuridica(
       razaoSocial: "razaoSocial", nomeFantasia: "nomeFantasia", nome: "nome");
-  socioJuridica.setCnpj(12322232325656565);
+  // socioJuridica.setCnpj(12322232325656565);
   enderecoSocio.setLogradouro("Rua W");
   enderecoSocio.setNumero(333);
 

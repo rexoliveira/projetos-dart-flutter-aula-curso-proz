@@ -2,21 +2,29 @@ import 'package:dart_application_final_semana_5/endereco.dart';
 import 'package:dart_application_final_semana_5/socio.dart';
 
 class SocioFisica extends Socio {
-  int? _cpf;
+  String _cpf = "";
 
   SocioFisica({
-    required super.nome,
+    super.nome,
     super.endereco,
   });
 
-  getcpf() => this._cpf;
+  geNome() => this.nome;
 
-  setCpf(int value) => this._cpf = value;
+  setNome(nome) => this.nome = nome;
+
+  get getcpf {
+    RegExp regExp = RegExp(r'^(\d{3})(\d{3})(\d{3})(\d{2})$');
+
+    return this._cpf.replaceAllMapped(
+        regExp, (Match m) => "${m[1]}.${m[2]}.${m[3]}-${m[4]}");
+  }
+
+  setCpf(value) => this._cpf = value;
 
   getEndereco() => this.endereco;
 
   setEndereco(Endereco endereco) => this.endereco = endereco;
-
 
   @override
   String toString() =>

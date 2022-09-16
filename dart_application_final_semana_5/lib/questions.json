@@ -1,18 +1,18 @@
 [
   {
     "0": {
-      "0": "1-Cadastre uma nova Empresa:",
+      "0": "\n1-Cadastre uma nova Empresa:",
       "1": "Digite a Razão Social [ENTER]:",
       "2": "Digite o Nome Fantasia [ENTER]:",
       "3": "Digite o CNPJ [ENTER]:",
-      "4": "Digite a Endereço (Logradouro) [ENTER]:",
-      "5": "Digite a Endereço (Número) [ENTER]:",
-      "6": "Digite a Endereço (Bairro) [ENTER]:",
-      "7": "Digite a Endereço (Estado ) [ENTER]:",
-      "8": "Digite a Endereço (CEP) [ENTER]:",
-      "9": "Digite a Endereço (Complemento) [ENTER]:",
+      "4": "Digite o Endereço (Logradouro) [ENTER]:",
+      "5": "Digite o Endereço (Número) [ENTER]:",
+      "6": "Digite o Endereço (Bairro) [ENTER]:",
+      "7": "Digite o Endereço (Estado ) [ENTER]:",
+      "8": "Digite o Endereço (CEP) [ENTER]:",
+      "9": "Digite o Endereço (Complemento) [ENTER]:",
       "10": "Digite o Telefone  [ENTER]:",
-      "11": "Digite os dados do Socio:\n Pessoa Física [1], Pessoa Jurídica [2] [ENTER]:"
+      "11": "Digite os dados do Socio:\nPessoa Física [1], Pessoa Jurídica [2] [ENTER]:"
     },
     "1": {
       "0": "2-Busque empresa pelo CNPJ:",
@@ -55,9 +55,13 @@
     "out0": "\nSaiu da aplicação\n"
   },
   {
-    "erro0": "\nDigite um valor valido entre 1 e 6!\n"
+    "erro0": "\nDigite um valor valido entre 1 e 6!\n",
+    "erro1": "\nEMPRESA-Erro ao processar o cadastro!\n",
+    "erro2": "\nPES-FISICA-Erro ao processar o cadastro!\n",
+    "erro3": "\nPES-JURIDICA-Erro ao processar o cadastro!\n"
   },
   {
-    "alert0": "\nDeseja adicionar mais Socio?\n Digite S ou N:\n"
+    "alert0": "\nDigite \"S\" apara sair [ENTER]\n ",
+    "alert1": "\nPermitido somente \"1\" e \"2\"!\n"
   }
 ]
