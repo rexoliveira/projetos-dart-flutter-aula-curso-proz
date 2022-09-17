@@ -23,7 +23,8 @@
       "1": "Digite o CPF ou CNPJ [ENTER]:"
     },
     "3": {
-      "0": "4-Listar empresas:"
+      "0": "4-Listar empresas:",
+      "1": "\nDigite \"J\" para listar Pessoa Jurídica, ou\n \"F\" para Pessoa Física:\n"
     },
     "4": {
       "0": "5-Exclua a empresa (ID):",
@@ -64,4 +65,5 @@
     "alert0": "\nDigite \"S\" apara sair [ENTER]\n ",
     "alert1": "\nPermitido somente \"1\" e \"2\"!\n"
   }
+ 
 ]

@@ -21,12 +21,15 @@ void main(List<String> arguments) {
         print(json[0][i.toString()]["0"]);
         if (i >= (json[0].length - 1)) {
           inputMenu = int.parse(stdin.readLineSync().toString());
-          if (inputMenu >= 1 && inputMenu <= (json[0].length - 1)) {
+          if (inputMenu >= 1 &&
+              inputMenu <= (json[0].length - 1) &&
+              inputMenu != 4) {
             for (var e = 0;
                 e < json[0][(inputMenu - 1).toString()].length;
                 e++) {
               //Imprime as questions
               print(json[0][(inputMenu - 1).toString()][e.toString()]);
+
               if (e != 0) {
                 processaEntradaEmpresa(e);
               }
@@ -34,6 +37,10 @@ void main(List<String> arguments) {
           } else if (inputMenu == 6) {
             controleMenu = false;
             print(json[4]["out0"]);
+          } else if (inputMenu == 4) {
+            print(json[0]["3"]["1"]);
+            var entrada = stdin.readLineSync();
+            listarEmpresas(entrada!.toLowerCase());
           } else {
             print(json[5]["erro0"]);
           }
@@ -242,6 +249,7 @@ void adicionarEmpresa(Empresa empresa, SocioJuridica socioJuridica,
       socioFisica.getcpf,
       socioFisica.getEndereco()
     ];
+    listaEmpresas.add(addEmpresa);
   } else if (processo['socio'] == "j") {
     addEmpresa['id'] = [empresa.getId];
     addEmpresa['cnpj'] = [empresa.getCnpj];
@@ -255,15 +263,13 @@ void adicionarEmpresa(Empresa empresa, SocioJuridica socioJuridica,
       socioJuridica.getNomeFantasia(),
       socioJuridica.getEndereco(),
     ];
+    listaEmpresas.add(addEmpresa);
   }
-
-  listaEmpresas.add(addEmpresa);
-  //print(listaEmpresas);
-  listarEmpresas(processo);
 }
 
-void listarEmpresas(processo) {
-  if (processo['socio'] == "f") {
+void listarEmpresas(listar) {
+  if (listar == "f") {
+    print("object" + listaEmpresas.length.toString());
     for (var element in listaEmpresas) {
       print("ID: " + element['id'][0]);
       print("CNPJ: " + element['cnpj'][0]);
@@ -276,7 +282,7 @@ void listarEmpresas(processo) {
       print("Nome Completo : " + element['socio'][0]);
       print("Endereço: " + element['socio'][2].toString());
     }
-  } else if (processo['socio'] == "j") {
+  } else if (listar == "j") {
     for (var element in listaEmpresas) {
       print("ID: " + element['id'][0]);
       print("CNPJ: " + element['cnpj'][0]);
